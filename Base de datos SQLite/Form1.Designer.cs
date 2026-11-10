@@ -36,17 +36,17 @@
             btninsertar = new Button();
             btnactualizar = new Button();
             btneliminar = new Button();
-            dataGridView1 = new DataGridView();
+            dgvbasededatos = new DataGridView();
             Nombre = new DataGridViewTextBoxColumn();
             Id = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvbasededatos).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Snap ITC", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(347, 39);
+            label1.Location = new Point(351, 54);
             label1.Name = "label1";
             label1.Size = new Size(356, 27);
             label1.TabIndex = 0;
@@ -93,6 +93,7 @@
             btninsertar.TabIndex = 5;
             btninsertar.Text = "INSERTAR";
             btninsertar.UseVisualStyleBackColor = true;
+            btninsertar.Click += btninsertar_Click;
             // 
             // btnactualizar
             // 
@@ -102,6 +103,7 @@
             btnactualizar.TabIndex = 6;
             btnactualizar.Text = "ACTUALIZAR";
             btnactualizar.UseVisualStyleBackColor = true;
+            btnactualizar.Click += btnactualizar_Click;
             // 
             // btneliminar
             // 
@@ -111,16 +113,18 @@
             btneliminar.TabIndex = 7;
             btneliminar.Text = "ELIMINAR";
             btneliminar.UseVisualStyleBackColor = true;
+            btneliminar.Click += btneliminar_Click;
             // 
-            // dataGridView1
+            // dgvbasededatos
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, Id });
-            dataGridView1.Location = new Point(269, 100);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(510, 377);
-            dataGridView1.TabIndex = 8;
+            dgvbasededatos.BackgroundColor = Color.White;
+            dgvbasededatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvbasededatos.Columns.AddRange(new DataGridViewColumn[] { Nombre, Id });
+            dgvbasededatos.Location = new Point(269, 100);
+            dgvbasededatos.Name = "dgvbasededatos";
+            dgvbasededatos.Size = new Size(510, 377);
+            dgvbasededatos.TabIndex = 8;
+            dgvbasededatos.CellContentClick += dgvbasededatos_CellContentClick;
             // 
             // Nombre
             // 
@@ -136,8 +140,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(833, 620);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(793, 684);
+            Controls.Add(dgvbasededatos);
             Controls.Add(btneliminar);
             Controls.Add(btnactualizar);
             Controls.Add(btninsertar);
@@ -149,7 +153,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvbasededatos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -164,7 +168,7 @@
         private Button btninsertar;
         private Button btnactualizar;
         private Button btneliminar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvbasededatos;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Id;
     }
